@@ -1,7 +1,13 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import possibleTypes from './generated/graphql';
+// import introspection from './generated/graphql';
 
 export default new ApolloClient({
   uri: 'https://countries.trevorblades.com',
-  cache: new InMemoryCache({ possibleTypes }),
+  cache: new InMemoryCache(possibleTypes),
 });
+
+// export default new ApolloClient({
+//   uri: 'https://countries.trevorblades.com',
+//   cache: new InMemoryCache({ possibleTypes: introspection.possibleTypes }),
+// });
