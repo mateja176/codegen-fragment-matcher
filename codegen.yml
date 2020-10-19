@@ -3,6 +3,8 @@ schema: 'https://countries.trevorblades.com'
 documents: 'src/**/*.graphql'
 generates:
   src/generated/graphql.ts:
+    config:
+      apolloClientVersion: 3
     plugins:
       - 'typescript'
       - 'typescript-operations'
@@ -10,5 +12,3 @@ generates:
   ./graphql.schema.json:
     plugins:
       - 'introspection'
-    config:
-      apolloClientVersion: 3
